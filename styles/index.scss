@@ -1,3 +1,6 @@
+@use 'colors';
+@use 'mixins';
+
 *,
 *::before,
 *::after {
@@ -28,5 +31,25 @@ a:not([class]) {
     text-decoration-skip-ink: auto;
 }
 body {
-    background-color: #7ba6de;
+    
+    background: {
+        image: url(./../images/pattern-background-mobile.svg);
+        position: top center;
+        repeat: no-repeat;
+        size: cover;
+    }
+
+    min-height: 100vh; 
+    padding: 1rem;
+    margin: 0;
+
+    @include mixins.centerGrid;
+    grid-template-rows: 1fr auto;
 }
+
+@media (min-width: 768px) {
+    body {
+      background-image: url('./../images/pattern-background-desktop.svg');
+    }
+  }
+  

@@ -29,7 +29,22 @@ a:not([class]) {
 }
 
 body {
-  background-color: #7ba6de;
+  background-image: url(./../images/pattern-background-mobile.svg);
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  padding: 1rem;
+  margin: 0;
+  display: grid;
+  place-items: center;
+  grid-template-rows: 1fr auto;
+}
+
+@media (min-width: 768px) {
+  body {
+    background-image: url("./../images/pattern-background-desktop.svg");
+  }
 }
 
 /*# sourceMappingURL=index.css.map */
