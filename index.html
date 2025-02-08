@@ -8,29 +8,44 @@
   
   <title>Frontend Mentor | Order summary card</title>
 
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body>
+  <main class="container">
+    <article class="card">
+      <div class="card__header" role="presentation"></div>
+      
+      <div class="card__content">
+        <h2 class="card__title">Order Summary</h2>
+        <p class="card__description">
+          You can now listen to millions of songs, audiobooks, and podcasts on any 
+          device anywhere you like!
+        </p>
 
-  Order Summary
+        <section class="card__plan">
+          <div class="card__plan-icon" role="presentation"></div>
+          
+          <div class="card__plan-details">
+            <b class="card__plan-title">Annual Plan</b>
+            <p class="card__plan-price">$59.99/year</p>
+          </div>
 
-  You can now listen to millions of songs, audiobooks, and podcasts on any 
-  device anywhere you like!
+          <a href="#" class="card__plan-change" aria-label="Change payment plan">Change</a>
+        </section>
 
-  Annual Plan
-  $59.99/year
+        <button class="card__button card__button--primary" aria-label="Proceed to payment">Proceed to Payment</button>
+        <button class="card__button card__button--secondary" type="button" aria-label="Cancel Order">Cancel Order</button>
+      </div>
+    </article>
+  </main>
 
-  Change
-
-  Proceed to Payment
-  Cancel Order
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+  <footer class="footer" role="contentinfo">
+    <p class="footer__text">
+      Challenge by 
+      <a class="footer__link" href="https://www.frontendmentor.io?ref=challenge" target="_blank" title="Visit Frontend Mentor">Frontend Mentor</a>. 
+      Coded by 
+      <a class="footer__link" href="https://www.frontendmentor.io/profile/NorimNori" title="Visit Gloria Rangel's profile">Gloria Rangel</a>.
+    </p>
+  </footer>
 </body>
+
 </html>
