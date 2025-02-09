@@ -1,6 +1,9 @@
-$paleBlue: hsl(225, 100%, 94%);
+$paleBlue: hsl(225, 100%, 94%, .5);
 $brightBlue: hsl(245, 75%, 52%);
+$transparentBlue: hsl(245, 75%, 52%, .35);
 
 $veryPaleBlue: hsl(225, 100%, 98%);
 $desaturatedBlue: hsl(224, 23%, 55%);
+$shadowBlue: hsla(224, 23%, 55%, .25);
 $darkBlue: hsl(223, 47%, 23%);
+$black: hsl(0, 0%, 0%)

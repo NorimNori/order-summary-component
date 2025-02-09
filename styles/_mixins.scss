@@ -1,4 +1,15 @@
+@use 'colors';
+
 @mixin centerGrid {
     display: grid;
     place-items: center;
+}
+
+@mixin fontsStyle ($size: 1rem, $weight: 500, $color: colors.$darkBlue ) {
+    font: {
+        size: $size;
+        weight: $weight;
+    }
+
+    color: $color;
 }

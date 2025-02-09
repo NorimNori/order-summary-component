@@ -26,11 +26,12 @@ h1, h2, h3 {
 img {
     max-width: 100%;
     display: block;
-  }
+}
 
 a:not([class]) {
     text-decoration-skip-ink: auto;
 }
+
 body {
 
     background: {
@@ -41,7 +42,7 @@ body {
     }
 
     min-height: 100vh; 
-    padding: 1rem;
+    padding: .5rem;
     margin: 0;
 
     @include mixins.centerGrid;
@@ -49,9 +50,115 @@ body {
     font-family: 'Red Hat Display', 'sans-serif';
 }
 
+.card{
+    width: 85vw;
+    max-width: 27rem;
+    border-radius: 20px;
+    background-color: colors.$veryPaleBlue;
+    box-shadow: 0 25px 50px colors.$shadowBlue;
+               
+    &__header {
+        background: {
+            image: url(./../images/illustration-hero.svg);
+            position: top center;
+            repeat: no-repeat;
+            size: cover;
+        }
+        width: 100%;
+        height: 30%;
+        aspect-ratio: 16 / 9;
+        border-radius: 20px 20px 0 0;
+    }
+
+    &__content {
+        @include mixins.centerGrid;
+        gap: 1em;
+        padding: clamp(2.2rem, 1.971rem + 1.143vw, 3rem) clamp(1.5rem, 1.071rem + 2.143vw, 3rem) clamp(1.3rem, 1.1rem + 1vw, 2rem);
+    }
+
+    &__title {
+        @include mixins.fontsStyle(clamp(1.2rem, 0rem + 6vw, 1.5rem), 900);
+    }
+    
+    &__description {
+        line-height: 1.7;
+        text-align: center;
+        @include mixins.fontsStyle(clamp(0.85rem, -0.15rem + 5vw, 1.1rem), 500, colors.$desaturatedBlue);
+    }
+
+    &__plan {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: .6em 0;
+        width: 100%;
+        padding: 1em;
+        border-radius: 15px;
+        background-color: colors.$paleBlue;
+         
+        &-details {
+            display: flex;
+            gap: clamp(1rem, 0.857rem + 0.714vw, 1.5rem);
+        }
+
+        &-icon {
+            background: {
+                image: url(./../images/icon-music.svg);
+                position: top center;
+                repeat: no-repeat;
+                size: cover;
+            }
+            width: 3em;
+            height: 3em;
+            filter: brightness(0.93);
+        }
+
+        &-title {
+            @include mixins.fontsStyle(clamp(0.8rem, 0rem + 4vw, 1rem), 900);
+        }
+
+        &-price {
+            @include mixins.fontsStyle(clamp(0.75rem, -0.05rem + 4vw, 0.95rem), 600, colors.$desaturatedBlue);
+        }
+
+        &-change {
+            @include mixins.fontsStyle(clamp(0.7rem, -0.1rem + 4vw, 0.9rem), 700, colors.$brightBlue);
+        }
+    }
+
+    &__button {
+        width: 100%;
+        padding: 1em;
+        border: none;
+        border-radius: 12px;
+        @include mixins.fontsStyle(clamp(0.85rem, -0.15rem + 5vw, 1.1rem), 700, colors.$veryPaleBlue);
+    }
+
+    &__button--primary {
+        z-index: 1;
+        background-color: colors.$brightBlue;
+        box-shadow: 0 6px 20px colors.$transparentBlue;
+    }
+
+    &__button--secondary {
+        background-color: colors.$veryPaleBlue;
+        color: colors.$desaturatedBlue;
+    }
+}
+
+footer {
+    font-size: .7rem;
+    color: colors.$darkBlue
+
+    a { 
+        text-align: center;
+        color: colors.$brightBlue
+    }
+}
+
 @media (min-width: 768px) {
     body {
       background-image: url('./../images/pattern-background-desktop.svg');
     }
-  }
+}
   

@@ -41,12 +41,111 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 100vh;
-  padding: 1rem;
+  padding: 0.5rem;
   margin: 0;
   display: grid;
   place-items: center;
   grid-template-rows: 1fr auto;
   font-family: "Red Hat Display", "sans-serif";
+}
+
+.card {
+  width: 85vw;
+  max-width: 27rem;
+  border-radius: 20px;
+  background-color: hsl(225, 100%, 98%);
+  box-shadow: 0 25px 50px hsla(224, 23%, 55%, 0.25);
+}
+.card__header {
+  background-image: url(./../images/illustration-hero.svg);
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 30%;
+  aspect-ratio: 16/9;
+  border-radius: 20px 20px 0 0;
+}
+.card__content {
+  display: grid;
+  place-items: center;
+  gap: 1em;
+  padding: clamp(2.2rem, 1.971rem + 1.143vw, 3rem) clamp(1.5rem, 1.071rem + 2.143vw, 3rem) clamp(1.3rem, 1.1rem + 1vw, 2rem);
+}
+.card__title {
+  font-size: clamp(1.2rem, 0rem + 6vw, 1.5rem);
+  font-weight: 900;
+  color: hsl(223, 47%, 23%);
+}
+.card__description {
+  line-height: 1.7;
+  text-align: center;
+  font-size: clamp(0.85rem, -0.15rem + 5vw, 1.1rem);
+  font-weight: 500;
+  color: hsl(224, 23%, 55%);
+}
+.card__plan {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0.6em 0;
+  width: 100%;
+  padding: 1em;
+  border-radius: 15px;
+  background-color: hsla(225, 100%, 94%, 0.5);
+}
+.card__plan-details {
+  display: flex;
+  gap: clamp(1rem, 0.857rem + 0.714vw, 1.5rem);
+}
+.card__plan-icon {
+  background-image: url(./../images/icon-music.svg);
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 3em;
+  height: 3em;
+  filter: brightness(0.93);
+}
+.card__plan-title {
+  font-size: clamp(0.8rem, 0rem + 4vw, 1rem);
+  font-weight: 900;
+  color: hsl(223, 47%, 23%);
+}
+.card__plan-price {
+  font-size: clamp(0.75rem, -0.05rem + 4vw, 0.95rem);
+  font-weight: 600;
+  color: hsl(224, 23%, 55%);
+}
+.card__plan-change {
+  font-size: clamp(0.7rem, -0.1rem + 4vw, 0.9rem);
+  font-weight: 700;
+  color: hsl(245, 75%, 52%);
+}
+.card__button {
+  width: 100%;
+  padding: 1em;
+  border: none;
+  border-radius: 12px;
+  font-size: clamp(0.85rem, -0.15rem + 5vw, 1.1rem);
+  font-weight: 700;
+  color: hsl(225, 100%, 98%);
+}
+.card__button--primary {
+  z-index: 1;
+  background-color: hsl(245, 75%, 52%);
+  box-shadow: 0 6px 20px hsla(245, 75%, 52%, 0.35);
+}
+.card__button--secondary {
+  background-color: hsl(225, 100%, 98%);
+  color: hsl(224, 23%, 55%);
+}
+
+footer {
+  font-size: 0.7rem;
+  color: hsl(223, 47%, 23%) a;
+  color-text-align: center;
+  color-color: hsl(245, 75%, 52%);
 }
 
 @media (min-width: 768px) {
