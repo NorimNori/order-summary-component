@@ -122,6 +122,10 @@ body {
   font-weight: 700;
   color: hsl(245, 75%, 52%);
 }
+.card__plan-change:hover {
+  text-decoration: none;
+  opacity: 0.8;
+}
 .card__button {
   width: 100%;
   padding: 1em;
@@ -135,10 +139,20 @@ body {
   z-index: 1;
   background-color: hsl(245, 75%, 52%);
   box-shadow: 0 6px 20px hsla(245, 75%, 52%, 0.35);
+  transition: 0.3s ease-in-out;
+}
+.card__button--primary:hover {
+  opacity: 0.8;
+  cursor: pointer;
 }
 .card__button--secondary {
   background-color: hsl(225, 100%, 98%);
   color: hsl(224, 23%, 55%);
+  transition: 0.3s ease-in-out;
+}
+.card__button--secondary:hover {
+  cursor: pointer;
+  color: hsl(223, 47%, 23%);
 }
 
 footer {
