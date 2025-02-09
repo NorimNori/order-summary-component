@@ -10,6 +10,36 @@
         size: $size;
         weight: $weight;
     }
-
+    
     color: $color;
+}
+
+@mixin background-image($url) {
+    background: {
+        image: url($url);
+        position: top center;
+        repeat: no-repeat;
+        size: cover;
+    }
+}
+
+@mixin buttonStyle($bg-color, $shadow-color, $use-opacity: false) {
+    width: 100%;
+    background-color: $bg-color;
+    box-shadow: 0 6px 20px $shadow-color;
+    transition: 0.3s ease-in-out;
+    padding: 1.2em;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+
+    @if $use-opacity {
+        &:hover {
+            opacity: 0.8;
+        }
+    } @else {
+        &:hover {
+            color: colors.$darkBlue;
+        }
+    }
 }
