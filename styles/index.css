@@ -1,3 +1,10 @@
+@font-face {
+  font-family: "Red Hat Display";
+  src: url("./../assets/fonts/Red_Hat_Display/RedHatDisplay-VariableFont_wght.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
 *,
 *::before,
 *::after {
@@ -39,6 +46,7 @@ body {
   display: grid;
   place-items: center;
   grid-template-rows: 1fr auto;
+  font-family: "Red Hat Display", "sans-serif";
 }
 
 @media (min-width: 768px) {
